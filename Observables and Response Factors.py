@@ -11,8 +11,9 @@ import numpy as np
 import math as m
 from sympy import symbols, integrate
 
-'''Import WFfile. File name should be changed accordingly.'''
-dat = FortranFile('WFfile','r') #Please edit filename here
+'''Import WFfile.'''
+name = input("Please enter a file name: ")
+dat = FortranFile(name,'r') 
 
 '''Read initial records'''
 
@@ -55,11 +56,11 @@ dz = 1 #Mesh spacing in z direction
 w = dx*dy*dz #Volume Element for the mesh
 
 
-'''Define the particle numbers. These need to be changed accordingly.'''
+'''Define the particle numbers.'''
 
-nneut = 0 #Neutron number. Please edit accordingly
+nneut = rec1[8] #Neutron number
 
-nprot = 0 #Proton number. Please edit accordingly
+nprot = rec1[9] #Proton number
 
 nst = nneut + nprot #Particle Number
 
