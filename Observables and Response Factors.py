@@ -12,7 +12,7 @@ import math as m
 from sympy import symbols, integrate
 
 '''Import WFfile. File name should be changed accordingly.'''
-dat = FortranFile('WFfile','r') 
+dat = FortranFile('WFfile','r') #Please edit filename here
 
 '''Read initial records'''
 
@@ -57,9 +57,9 @@ w = dx*dy*dz #Volume Element for the mesh
 
 '''Define the particle numbers. These need to be changed accordingly.'''
 
-nneut = 0 #Neutron number
+nneut = 0 #Neutron number. Please edit accordingly
 
-nprot = 0 #Proton number
+nprot = 0 #Proton number. Please edit accordingly
 
 nst = nneut + nprot #Particle Number
 
